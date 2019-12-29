@@ -1,5 +1,9 @@
 {
-  "name": "4bars-testing",
+  "name": "musicascode-set-player",
+  "author": "Peter Styk <peter@musicascode.com> (https://musicascode.com)",
+  "homepage": "https://github.com/MusicAsCode/set-player",
+  "repository": "github:MusicAsCode/set-player",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.tsx",
@@ -24,7 +28,12 @@
     "@types/node": "^10.12.5",
     "typescript": "^3.1.6"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "keywords": [],
   "description": ""
 }

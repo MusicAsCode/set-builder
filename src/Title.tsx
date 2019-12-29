@@ -4,7 +4,7 @@ import "./Title.css";
 const Title = () => {
   return (
     <div className="title">
-      <h1>4BARS API Test with ToneJs</h1>
+      <h1>MusicAsCode - Set Player [WIP]</h1>
     </div>
   );
 };
