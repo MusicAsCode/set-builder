@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Sampler } from "tone";
-import A1 from "./A1.mp3";
 
 import "./ToneSampler.css";
+
 
 export default class ToneSampler extends React.Component {
   sampler: any;
@@ -13,7 +13,7 @@ export default class ToneSampler extends React.Component {
     this.handleClick = this.handleClick.bind(this);
 
     this.sampler = new Sampler(
-      { A1 },
+      { A1: "https://f.4bars.media/E8/79/E879C9869AC64C3EA28AEACAB2AA390D.ogg" },
       {
         onload: () => {
           this.setState({ isLoaded: true });
