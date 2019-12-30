@@ -6,7 +6,7 @@ Written for React using TypeScript (enforcing strong types). Using Axios for API
 
 ### Getting Started
 
-TBD
+* CodeSandbox for this repo is hosted here: https://codesandbox.io/s/musicascode-set-player-kqz3t so you can see what we have so far. This project is WORK-IN-PROGRESS at earliest stage possible. Almost nothing works. However attention to React, TypeScript, ToneJs, Axios, OpenID is of paramount importance to us going forward.
 
 ### Roadmap
 
