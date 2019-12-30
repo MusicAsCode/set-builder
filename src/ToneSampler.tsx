@@ -3,21 +3,23 @@ import { Sampler } from "tone";
 
 import "./ToneSampler.css";
 
+type SamplerState = {
+  isLoaded: boolean
+}
 
-export default class ToneSampler extends React.Component {
-  sampler: any;
 
-  constructor(props) {
+export default class ToneSampler extends React.Component<{}, SamplerState>  {
+  sampler: Sampler;
+
+  constructor(props: any) {
     super(props);
     this.state = { isLoaded: false };
     this.handleClick = this.handleClick.bind(this);
 
     this.sampler = new Sampler(
       { A1: "https://f.4bars.media/E8/79/E879C9869AC64C3EA28AEACAB2AA390D.ogg" },
-      {
-        onload: () => {
-          this.setState({ isLoaded: true });
-        }
+      () => {
+        this.setState({ isLoaded: true });
       }
     ).toMaster();
   }
