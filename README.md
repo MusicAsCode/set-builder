@@ -21,6 +21,8 @@ You don't have to strictly follow steps below. But codesandbox is great for shar
 2. import sandbox from github (https://github.com/MusicAsCode/set-player)
 3. using codesandobx github icon on the right, create fork of this repo into your github space, you will be able to edit and save files into your own fork and then submit changes to main project using pull requests mechanism
 
+NOTE: because of fsevents 1.2.9 requirements, yarn will not build with optional requirements on linux. you're welcome to experiment with npm however we will only accept depdendencies if managed by yarn
+
 ### License
 
 This project is under MIT License (c) 2019-2020 Music As Code
