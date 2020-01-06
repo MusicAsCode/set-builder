@@ -38,7 +38,7 @@ const Track = props => {
     .start(0);
 
   useEffect(() => {
-    console.log(props.asset.guid + value.toString());
+    console.log(props.asset.guid + " | " + value.toString());
     //player.volume.value = value;
   });
 
@@ -68,7 +68,7 @@ function reducer(state, action) {
     case "PLAY":
       //this.sampler.triggerAttack("A1");
       console.log("start clicked");
-      Tone.start();
+
       Tone.Transport.start("+0");
       return;
     case "STOP":
@@ -91,6 +91,7 @@ const Tracks = props => {
   Tone.Transport.loop = true;
   Tone.Transport.loopStart = "0:0:0";
   Tone.Transport.loopEnd = "2:0:0";
+  Tone.start();
 
   //these used to be in a class
   //i don't know how to put them inside of the const
