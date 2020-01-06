@@ -17,7 +17,7 @@ type Examples = keyof typeof EXAMPLES;
 
 const EXAMPLE_NAMES = Object.keys(EXAMPLES) as Examples[];
 
-const App = () => {
+const Track = () => {
   // Use state to keep track of the current displayed example component
   const [example, setExample] = React.useState<Examples>("Counter");
 
@@ -53,4 +53,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Track;

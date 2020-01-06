@@ -1,0 +1,117 @@
+import * as React from "react";
+import { useEffect, useState, useCallback, useReducer } from "react";
+import "./Track.css";
+import { Sampler } from "tone";
+import "./ToneSampler.css";
+import * as Tone from "tone";
+import { Slider } from "react-nexusui";
+
+//this is list of assets, temporary eventually will be rest call
+const assetList = {
+  assets: [
+    {
+      guid: "loop01",
+      name: "Fiction",
+      volume: -4,
+      url: "https://f.4bars.media/E8/79/E879C9869AC64C3EA28AEACAB2AA390D.ogg"
+    },
+    {
+      guid: "loop02",
+      name: "Stranger",
+      volume: -4,
+      url: "https://f.4bars.media/49/9D/499D2EF5A9BD4836A256E70A03DAF337.ogg"
+    }
+  ]
+};
+
+//single track
+const Track = props => {
+  const [value, setValue] = useState<number>(props.asset.volume);
+
+  var player = new Tone.Player({
+    url: props.asset.url,
+    loop: false,
+    volume: props.asset.volume
+  })
+    .toDestination()
+    .sync()
+    .start(0);
+
+  useEffect(() => {
+    console.log(props.asset.guid + value.toString());
+    //player.volume.value = value;
+  });
+
+  return (
+    <>
+      <div className="track">
+        <p>{props.asset.name}</p>
+        <Slider
+          size={[200, 20]}
+          min={-10}
+          max={3}
+          step={1}
+          value={value}
+          onChange={setValue}
+        />
+      </div>
+    </>
+  );
+};
+
+//just to complete example for now
+const initialState = { count: 0 };
+
+//reducer, based on example
+function reducer(state, action) {
+  switch (action.type) {
+    case "PLAY":
+      //this.sampler.triggerAttack("A1");
+      console.log("start clicked");
+      Tone.start();
+      Tone.Transport.start("+0");
+      return;
+    case "STOP":
+      //this.sampler.triggerAttack("A1");
+      console.log("stop clicked");
+      Tone.Transport.stop();
+
+      return;
+    default:
+      throw new Error();
+  }
+}
+
+//this is track generator, each loop is a new track, one loop per track
+//we will try to put ToneJs transport here and have Track elements use that as global synchronizer
+const Tracks = props => {
+  Tone.Transport.timeSignature = [4, 4];
+  console.log("default bmp: " + Tone.Transport.bpm.value);
+  Tone.Transport.bpm.value = 126.25;
+  Tone.Transport.loop = true;
+  Tone.Transport.loopStart = "0:0:0";
+  Tone.Transport.loopEnd = "2:0:0";
+
+  //these used to be in a class
+  //i don't know how to put them inside of the const
+  //basically we need to attach those to the buttons below
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <React.Fragment>
+      <button onClick={() => dispatch({ type: "PLAY" })}>PLAY</button>
+      <button onClick={() => dispatch({ type: "STOP" })}>STOP</button>
+      {props.items.assets.map(item => (
+        <React.Fragment key={item.guid}>
+          <Track asset={item} />
+        </React.Fragment>
+      ))}
+    </React.Fragment>
+  );
+};
+
+export default class AcmeTrackIterator extends React.Component {
+  render() {
+    return <Tracks items={assetList} />;
+  }
+}

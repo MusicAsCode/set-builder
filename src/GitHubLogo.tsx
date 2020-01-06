@@ -3,7 +3,7 @@ import * as React from "react";
 const GitHubLogo = () => {
   return (
     <a
-      href="https://github.com/styk-tv/4bars"
+      href="https://github.com/MusicAsCode/set-player"
       className="github-corner"
       aria-label="View source on GitHub"
     >

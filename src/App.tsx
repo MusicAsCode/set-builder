@@ -1,16 +1,11 @@
 import * as React from "react";
 
-import Track from "./Track";
-import GitHubLogo from "./GitHubLogo";
-
-import Title from "./Title";
+import AcmeTrackIterator from "./AcmeTrackIterator";
 
 const App = () => {
   return (
     <>
-      <Title />
-      <GitHubLogo />
-      <Track />
+      <AcmeTrackIterator />
     </>
   );
 };
