@@ -61,13 +61,14 @@ const Track = props => {
 //this is track generator, each loop is a new track, one loop per track
 //we will try to put ToneJs transport here and have Track elements use that as global synchronizer
 const Tracks = props => {
+  Tone.start();
   Tone.Transport.timeSignature = [4, 4];
   console.log("default bmp: " + Tone.Transport.bpm.value);
   Tone.Transport.bpm.value = 126.25;
   Tone.Transport.loop = true;
   Tone.Transport.loopStart = "0:0:0";
   Tone.Transport.loopEnd = "2:0:0";
-  Tone.start();
+
 
   //these used to be in a class
   //i don't know how to put them inside of the const
