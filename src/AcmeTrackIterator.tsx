@@ -19,7 +19,7 @@ const assetList = {
       guid: "loop02",
       name: "Stranger",
       volume: -4,
-      url: "https://f.4bars.media/49/9D/499D2EF5A9BD4836A256E70A03DAF337.ogg"
+      url: "https://f.4bars.media/E8/F1/E8F1E4E304334B5580D23F9CCC376278.ogg"
     }
   ]
 };
