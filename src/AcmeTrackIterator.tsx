@@ -59,29 +59,6 @@ const Track = props => {
   );
 };
 
-//just to complete example for now
-const initialState = { count: 0 };
-
-//reducer, based on example
-function reducer(state, action) {
-  switch (action.type) {
-    case "PLAY":
-      //this.sampler.triggerAttack("A1");
-      console.log("start clicked");
-
-      Tone.Transport.start("+0");
-      return;
-    case "STOP":
-      //this.sampler.triggerAttack("A1");
-      console.log("stop clicked");
-      Tone.Transport.stop();
-
-      return;
-    default:
-      throw new Error();
-  }
-}
-
 //this is track generator, each loop is a new track, one loop per track
 //we will try to put ToneJs transport here and have Track elements use that as global synchronizer
 const Tracks = props => {
@@ -91,17 +68,22 @@ const Tracks = props => {
   Tone.Transport.loop = true;
   Tone.Transport.loopStart = "0:0:0";
   Tone.Transport.loopEnd = "2:0:0";
-  Tone.start();
+  //Tone.start();
 
-  //these used to be in a class
-  //i don't know how to put them inside of the const
-  //basically we need to attach those to the buttons below
+  const onPlayClick = () => {
+    console.log("start clicked");
+    Tone.Transport.start("+0");
+  };
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const onStopClick = () => {
+    console.log("stop clicked");
+    Tone.Transport.stop();
+  };
+
   return (
     <React.Fragment>
-      <button onClick={() => dispatch({ type: "PLAY" })}>PLAY</button>
-      <button onClick={() => dispatch({ type: "STOP" })}>STOP</button>
+      <button onClick={onPlayClick}>PLAY</button>
+      <button onClick={onStopClick}>STOP</button>
       {props.items.assets.map(item => (
         <React.Fragment key={item.guid}>
           <Track asset={item} />
