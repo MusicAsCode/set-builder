@@ -6719,6 +6719,11 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
+nexusui@2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/nexusui/-/nexusui-2.0.10.tgz#a756d422fc892d74547140cee2c812182ce7156a"
+  integrity sha512-EmSnmC1NGIf72kpDeF/c8CizDjaWxvF99w+UV4QZzyLO302rS64PxBnqt9XD51P69HTqCvKTJaTDXP8/GYS4KA==
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -8461,6 +8466,11 @@ react-is@^16.8.1, react-is@^16.8.4:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
+
+react-nexusui@0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/react-nexusui/-/react-nexusui-0.1.7.tgz#74772e5d56ac4a0a1bb05c10e784bf39a6bb8f1c"
+  integrity sha512-QsRetAK7I5CrDqbDockWriNO/AwIM3SDWTamOPH4cRYWrxuaX6pjB1/VSE7DSwoUACmafza5Y2/cGzN/0saIcQ==
 
 react-scripts@3.3.0:
   version "3.3.0"
