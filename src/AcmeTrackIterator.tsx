@@ -1,5 +1,9 @@
 import * as React from "react";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useState, useCallback, useReducer } from "react";
+import "./AcmeTrackIterator.css";
+//import { Sampler } from "tone";
+//import "./ToneSampler.css";
+import * as Tone from "tone";
 import { Slider } from "react-nexusui";
 import * as Tone from "tone";
 import "./ToneSampler.css";
@@ -69,19 +73,18 @@ const Tracks = props => {
   Tone.Transport.loopStart = "0:0:0";
   Tone.Transport.loopEnd = "2:0:0";
 
+  //Tone.start();
 
-  //these used to be in a class
-  //i don't know how to put them inside of the const
-  //basically we need to attach those to the buttons below
   const onPlayClick = () => {
-      console.log("start clicked");
-      Tone.Transport.start("+0");
+    console.log("start clicked");
+    Tone.Transport.start("+0");
   };
 
   const onStopClick = () => {
     console.log("stop clicked");
     Tone.Transport.stop();
-};
+  };
+
 
   return (
     <React.Fragment>

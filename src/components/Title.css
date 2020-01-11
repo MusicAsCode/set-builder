@@ -1,0 +1,26 @@
+.title {
+  /* position: absolute; */
+  top: 8px;
+  left: 16px;
+}
+
+.title h1 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+.title h5 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+div {
+  width: 450px;
+  border: 0px solid rgba(0, 128, 0, 0);
+  padding: 0px;
+  margin: 10px;
+}
