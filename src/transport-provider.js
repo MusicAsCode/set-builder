@@ -8,6 +8,7 @@ const TransportProvider = () => {
   Tone.Transport.loop = true;
   Tone.Transport.loopStart = "0:0:0";
   Tone.Transport.loopEnd = "2:0:0";
+  //Tone.Transport.stop();
 
   return null;
 };

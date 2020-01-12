@@ -28,17 +28,20 @@ import TransportProvider from "./transport-provider";
 const Track = ({ asset, player }) => {
   const [volume, setVolume] = useState(asset.volume);
 
-  // var pl = new Tone.Player({
-  //   url: asset.url,
-  //   loop: false,
-  //   volume: asset.volume
-  // })
-  player.toMaster().sync();
-  //    .start(0);
+  //second argument provided, only renders once
+  useEffect(() => {
+    player.autostart = false;
+    player.loop = true;
+    player.loopStart = "0:0:0";
+    player.loopEnd = "2:0:0";
+    player.toMaster().sync();
+    player.start();
+  }, []);
 
+  //react on volume change only
   useEffect(() => {
     console.log(asset.guid + " | " + volume.toString());
-    console.log(asset.guid + " | " + player.volume.toString());
+    console.log(asset.guid + " | " + player.state.toString());
     player.volume.value = volume;
   });
 
@@ -49,9 +52,9 @@ const Track = ({ asset, player }) => {
           {asset.name} ({volume})
         </p>
         <Slider
-          size={[200, 20]}
-          min={-10}
-          max={3}
+          size={[200, 10]}
+          min={-45}
+          max={1}
           step={1}
           value={volume}
           onChange={setVolume}
@@ -64,24 +67,32 @@ const Track = ({ asset, player }) => {
 //this is track generator, each loop is a new track, one loop per track
 //we will try to put ToneJs transport here and have Track elements use that as global synchronizer
 const Tracks = ({ players, assetList }) => {
-  // Tone.start();
-  // Tone.Transport.timeSignature = [4, 4];
-  // console.log("default bmpp: " + Tone.Transport.bpm.value);
-  // Tone.Transport.bpm.value = 126;
-  // Tone.Transport.loop = true;
-  // Tone.Transport.loopStart = "0:0:0";
-  // Tone.Transport.loopEnd = "2:0:0";
+  const onLoop = () => {
+    console.log("loop restart");
+  };
 
-  //Tone.start();
+  var loop = new Tone.Loop(function(time) {
+    //triggered every eighth note.
+    console.log(time);
+  }, "8n").start(0);
 
   const onPlayClick = () => {
-    console.log("start clicked");
-    Tone.Transport.start("+0");
+    // console.log("start clicked");
+    // //players.get("loop01").start(0);
+    // //players.get("loop02").start(0);
+
+    // var loop = new Tone.Loop(onLoop, "8n").start(0);
+    // loop.start(0).stop('4m')
+
+    // Tone.Transport.start("+0");
+
+    Tone.Transport.start();
   };
 
   const onStopClick = () => {
     console.log("stop clicked");
     Tone.Transport.stop();
+    //loop.stop();
   };
 
   return (
@@ -101,7 +112,6 @@ const Tracks = ({ players, assetList }) => {
 export default function Pattern() {
   return (
     <>
-      <TransportProvider />
       <PlayersProvider>
         {({ players, assetList }) => {
           if (!players) {
@@ -112,6 +122,7 @@ export default function Pattern() {
           //return <p>assets loaded {JSON.stringify(assetList.assets[0].url, null, 2)}</p>;
         }}
       </PlayersProvider>
+      <TransportProvider />
     </>
   );
 }
