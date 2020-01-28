@@ -7,7 +7,7 @@ const TransportProvider = () => {
   console.log("default bmp: " + Tone.Transport.bpm.value);
   Tone.Transport.loop = true;
   Tone.Transport.loopStart = "0:0:0";
-  Tone.Transport.loopEnd = "2:0:0";
+  Tone.Transport.loopEnd = "4:0:0";
   //Tone.Transport.stop();
 
   return null;
