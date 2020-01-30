@@ -1,12 +1,9 @@
 import * as React from "react";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import {
   useEffect,
-  useRef,
-  useLayoutEffect,
-  useState,
-  useCallback,
-  useReducer
+  useState
+
 } from "react";
 import "./Pattern.css";
 import { Slider } from "react-nexusui";
@@ -18,7 +15,7 @@ import Footer from "./footer";
 // Import react-circular-progressbar module and styles
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { isNull } from "util";
+//import { isNull } from "util";
 
 //this is list of assets, temporary eventually will be rest call
 // const assetList = {
@@ -53,32 +50,7 @@ import { isNull } from "util";
 //   )
 // }
 
-const marks = [
-  {
-    value: 0,
-    label: "0°C"
-  },
-  {
-    value: 20,
-    label: "20°C"
-  },
-  {
-    value: 37,
-    label: "37°C"
-  },
-  {
-    value: 100,
-    label: "100°C"
-  }
-];
 
-function valuetext(value: number) {
-  return `${value}°C`;
-}
-
-function valueLabelFormat(value: number) {
-  return marks.findIndex(mark => mark.value === value) + 1;
-}
 
 //single track
 const Track = ({ asset, player, tracksPos }) => {

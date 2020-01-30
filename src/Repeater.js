@@ -2,7 +2,6 @@ import * as Tone from "tone";
 import * as React from "react";
 import PlayersProvider from "./players-provider";
 import TransportProvider from "./transport-provider";
-import Tracks from "./Tracks";
 
 export default function Pattern() {
   return (
