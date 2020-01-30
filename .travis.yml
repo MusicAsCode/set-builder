@@ -7,4 +7,4 @@ node_js:
   - "12"
   - "11"
   - "10"
-script: CI=false yarn build
+script: yarn travis
