@@ -7,6 +7,7 @@
 
 .track {
   text-align: center;
+  font-family: "retron";
   padding: 32px;
   margin-bottom: 5px;
   margin-left: 20px;
@@ -27,4 +28,15 @@
   border-radius: 2px;
   width: 100%;
   background-color: #f353d0;
+}
+
+.custom-waves {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  border: 1px solid #1f1f1f;
+  background: #0f0f0f;
+  float: left;
 }
