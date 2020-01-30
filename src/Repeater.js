@@ -1,7 +1,7 @@
 import * as Tone from "tone";
 import * as React from "react";
-import PlayersProvider from "./players-provider";
-import TransportProvider from "./transport-provider";
+import PlayersProvider from "./PlayersProvider";
+import TransportProvider from "./TransportProvider";
 
 export default function Pattern() {
   return (

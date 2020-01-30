@@ -4,7 +4,7 @@
   "homepage": "https://github.com/MusicAsCode/set-player",
   "repository": "github:MusicAsCode/set-player",
   "license": "MIT",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": true,
   "main": "src/index.tsx",
   "dependencies": {
