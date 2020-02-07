@@ -1,14 +1,31 @@
 import * as React from "react";
 import Tracks from "./Tracks";
-//import ReactDOM from "react-dom";
-
 import "./Pattern.css";
-
-
 import PlayersProvider from "./PlayersProvider";
 import TransportProvider from "./TransportProvider";
-
 import "react-circular-progressbar/dist/styles.css";
+
+
+export default function Pattern() {
+  return (
+    <>
+      <TransportProvider />
+      <PlayersProvider>
+        {({ players, assetList }) => {
+          if (!players) {
+            return <p>assets loading....</p>;
+          }
+
+          return <Tracks players={players} assetList={assetList} />;
+          //return <p>assets loaded {JSON.stringify(assetList.assets[0].url, null, 2)}</p>;
+        }}
+      </PlayersProvider>
+    </>
+  );
+}
+
+
+
 //import { isNull } from "util";
 
 //this is list of assets, temporary eventually will be rest call
@@ -45,23 +62,3 @@ import "react-circular-progressbar/dist/styles.css";
 // }
 
 
-
-
-
-export default function Pattern() {
-  return (
-    <>
-      <TransportProvider />
-      <PlayersProvider>
-        {({ players, assetList }) => {
-          if (!players) {
-            return <p>assets loading....</p>;
-          }
-          //THIS IS MESSSED UP. FIX FIX FIX
-          return <Tracks players={players} assetList={assetList} />;
-          //return <p>assets loaded {JSON.stringify(assetList.assets[0].url, null, 2)}</p>;
-        }}
-      </PlayersProvider>
-    </>
-  );
-}
