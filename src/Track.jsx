@@ -1,14 +1,9 @@
 import * as React from "react";
-import {
-  useEffect,
-  useState
-
-} from "react";
+import { useEffect, useState } from "react";
 import { Slider } from "react-nexusui";
 import * as Tone from "tone";
 // Import react-circular-progressbar module and styles
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-
 
 //single track
 const Track = ({ asset, player, tracksPos }) => {
@@ -51,12 +46,12 @@ const Track = ({ asset, player, tracksPos }) => {
     let playerCurrentBeat =
       trBeatsPerBar * transportPositionBar + transportPositionBeat;
 
-    console.log(
-      "Total Beats: " + trTotalBeats + " | Current Beat: " + playerCurrentBeat
-    );
+    // console.log(
+    //   "Total Beats: " + trTotalBeats + " | Current Beat: " + playerCurrentBeat
+    // );
 
     setBarProgress(Number((playerCurrentBeat / trTotalBeats) * 100));
-    console.log("Transport Position " + tracksPos);
+    //console.log("Transport Position " + tracksPos);
     //   //player.volume.value = volume;
   }, [tracksPos]);
 
@@ -66,7 +61,7 @@ const Track = ({ asset, player, tracksPos }) => {
     //console.log(asset.guid + " | " + player.state.toString());
     //console.log(asset.guid + " | " + player.loopEnd.toString());
     //console.log(asset.guid + " | " + Tone.Transport.position.toString());
-    console.log("Volume " + asset.guid + " | " + volume.toString());
+    //console.log("Volume " + asset.guid + " | " + volume.toString());
     //console.log("Tracks Global Position" + asset.guid + " | " + tracksPos);
     player.volume.value = volume;
   }, [volume]);
@@ -76,7 +71,7 @@ const Track = ({ asset, player, tracksPos }) => {
       <div className="track">
         <p>
           {asset.name} ({volume} {tracksPos})
-          </p>
+        </p>
         <Slider
           size={[200, 10]}
           min={-45}
@@ -99,4 +94,4 @@ const Track = ({ asset, player, tracksPos }) => {
   );
 };
 
-export default Track;  
+export default Track;

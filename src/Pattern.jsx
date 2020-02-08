@@ -1,10 +1,9 @@
 import * as React from "react";
 import Tracks from "./Tracks";
-import "./Pattern.css";
+//import "./Pattern.css";
 import PlayersProvider from "./PlayersProvider";
 import TransportProvider from "./TransportProvider";
 import "react-circular-progressbar/dist/styles.css";
-
 
 export default function Pattern() {
   return (
@@ -23,8 +22,6 @@ export default function Pattern() {
     </>
   );
 }
-
-
 
 //import { isNull } from "util";
 
@@ -60,5 +57,3 @@ export default function Pattern() {
 //     </>
 //   )
 // }
-
-
