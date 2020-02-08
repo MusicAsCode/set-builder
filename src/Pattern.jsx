@@ -1,6 +1,6 @@
 import * as React from "react";
 import Tracks from "./Tracks";
-//import "./Pattern.css";
+import "./Pattern.css";
 import PlayersProvider from "./PlayersProvider";
 import TransportProvider from "./TransportProvider";
 import "react-circular-progressbar/dist/styles.css";

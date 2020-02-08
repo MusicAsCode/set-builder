@@ -10,8 +10,9 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background: #333333;
 }
-.root {
+root {
   display: flex;
   height: 100vh;
   flex-direction: column;
@@ -39,4 +40,29 @@ footer {
   background-color: #444444;
   width: 100vf;
   border-radius: 25px;
+}
+
+
+
+button {
+  border-radius: 16px;
+  background-color: #9339f9;
+  padding: 8px 16px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 200ms ease;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button + button {
+  margin-left: 8px;
+}
+
+button:hover,
+button:focus,
+button.active {
+  background-color: #f353d0;
 }

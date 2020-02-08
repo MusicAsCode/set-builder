@@ -1,5 +1,5 @@
 import * as React from "react";
-//import "./Footer.css";
+import "./Footer.css";
 import * as Tone from "tone";
 
 const Footer = () => {
@@ -25,7 +25,6 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      asdf
       <button onClick={onPlayClick}>PLAY</button>
       <button onClick={onStopClick}>STOP</button>
     </footer>
