@@ -1,8 +1,9 @@
 import * as React from "react";
 //import Title from "./components/Title";
-//import Github from "./components/GitHubLogo";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import GitHubLogo from "./components/GitHubLogo";
 
 import Pattern from "./Pattern";
 import "./App.css";
@@ -12,7 +13,7 @@ const App = () => {
     <>
       <Header />
 
-      {/* <Github /> */}
+      <GitHubLogo />
       {/* <Title /> */}
       <Pattern />
 

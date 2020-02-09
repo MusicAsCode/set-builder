@@ -1,10 +1,10 @@
 {
-  "name": "blablar-work-in-progress-synced-transport-working",
+  "name": "Music As Code Set Player",
   "author": "Peter Styk <peter@musicascode.com> (https://musicascode.com)",
   "homepage": "https://github.com/MusicAsCode/set-player",
   "repository": "github:MusicAsCode/set-player",
   "license": "MIT",
-  "version": "0.4.2",
+  "version": "0.6",
   "private": true,
   "main": "src/index.tsx",
   "dependencies": {

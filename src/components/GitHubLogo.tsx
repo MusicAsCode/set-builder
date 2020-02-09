@@ -1,5 +1,5 @@
 import * as React from "react";
-//import "./GitHubLogo.css";
+import "./GitHubLogo.css";
 
 const GitHubLogo = () => {
   return (
@@ -9,12 +9,12 @@ const GitHubLogo = () => {
       aria-label="View source on GitHub"
     >
       <svg
-        width="80"
-        height="80"
+        width="60"
+        height="60"
         viewBox="0 0 250 250"
         style={{
-          fill: "#151513",
-          color: "#9339f9",
+          fill: "white",
+          color: "black",
           position: "absolute",
           top: 0,
           border: 0,
