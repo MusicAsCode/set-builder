@@ -4,6 +4,7 @@ import { Slider } from "react-nexusui";
 import * as Tone from "tone";
 // Import react-circular-progressbar module and styles
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "./Track.css";
 
 //single track
 const Track = ({ asset, player, tracksPos }) => {
@@ -69,18 +70,27 @@ const Track = ({ asset, player, tracksPos }) => {
   return (
     <>
       <div className="track">
-        <p>
-          {asset.name} ({volume} {tracksPos})
-        </p>
-        <Slider
-          size={[200, 10]}
-          min={-45}
-          max={1}
-          step={1}
-          value={volume}
-          onChange={setVolume}
-        />
-        <div style={{ width: "40px" }}>
+
+        <p>{asset.name}</p>
+
+        <div className="trackVolume">
+          <Slider
+            size={[200, 10]}
+            min={-45}
+            max={1}
+            step={1}
+            value={volume}
+            onChange={setVolume}
+          />
+          <h1>
+            Volume dB:
+          </h1>
+          <h2>
+            {volume}
+          </h2>
+        </div>
+
+        <div className="trackProgress">
           <CircularProgressbar
             value={barProgress}
             strokeWidth={50}
@@ -88,7 +98,14 @@ const Track = ({ asset, player, tracksPos }) => {
               strokeLinecap: "butt"
             })}
           />
+          <h1>
+            LOOP POS:
+          </h1>
+          <h2>
+            {tracksPos}
+          </h2>
         </div>
+
       </div>
     </>
   );

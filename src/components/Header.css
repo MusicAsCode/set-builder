@@ -1,0 +1,14 @@
+header {
+  background: #333333;
+  padding: 10px;
+  color: orange;
+  font-size: 26px;
+  position: relative;
+}
+
+header h1 {
+    font-size: 12px;
+    position: absolute;
+    left: 160px;
+    top: 5px;
+}
