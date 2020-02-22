@@ -1,10 +1,10 @@
 {
-  "name": "Music As Code Set Player",
+  "name": "music-as-code-visualization-wip",
   "author": "Peter Styk <peter@musicascode.com> (https://musicascode.com)",
   "homepage": "https://github.com/MusicAsCode/set-player",
   "repository": "github:MusicAsCode/set-player",
   "license": "MIT",
-  "version": "0.6",
+  "version": "0.7",
   "private": true,
   "main": "src/index.tsx",
   "dependencies": {
@@ -34,12 +34,7 @@
     "fsevents": "1.2.9",
     "typescript": "^3.7.4"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
   "keywords": [],
   "description": ""
 }

@@ -1,96 +1,91 @@
 .track {
-    text-align: left;
-    margin-bottom: 5px;
-    font-family: "Roboto";
-    /* 
+  text-align: left;
+  margin-bottom: 5px;
+  font-family: "Roboto";
+  /* 
     margin-left: 5px;
     margin-top: 5px;
     margin-right: 5px; */
-    background-color: #444444;
-    /* width: 100vf; */
-    border-radius: 25px;
-    height: 80px;
-    position: relative;
-  }
+  background-color: #444444;
+  /* width: 100vf; */
+  border-radius: 25px;
+  height: 160px;
+  position: relative;
+}
 
+/* TRACK TITLE */
+.track p {
+  font-size: 20px;
+  color: white;
+  /* border: 1px solid green ; */
+  /* padding: 0 0 0 0; */
+  margin: 5px 0 0 15px;
+  position: absolute;
+}
 
-  /* TRACK TITLE */
-  .track p {
-    font-size: 20px;
-      color: white;
-      /* border: 1px solid green ; */
-      /* padding: 0 0 0 0; */
-      margin: 5px 0 0 15px;
-      position: absolute;
-  }
+/* TRACK VOLUME */
+.track .trackVolume {
+  width: 200px;
+  height: 10px;
+  /* border: 1px solid white ; */
+  top: 30px;
+  left: 15px;
+  position: absolute;
+}
 
+.trackVolume h1 {
+  height: 15px;
+  /* border: 1px solid yellow ; */
+  top: 9px;
+  left: 0px;
+  font-size: 10px;
+  color: darkgray;
+  position: absolute;
+}
 
-  /* TRACK VOLUME */
-  .track .trackVolume {
-    width: 200px;
-    height: 10px;
-    /* border: 1px solid white ; */
-    top: 30px;
-    left: 15px;
-    position: absolute;
-  }
+.trackVolume h2 {
+  font-family: "retron";
+  text-align: center;
+  width: 45px;
+  height: 15px;
+  /* border: 1px solid yellow ; */
+  top: 5px;
+  right: 0px;
+  font-size: 13px;
+  color: yellow;
+  background: black;
+  position: absolute;
+}
 
-  .trackVolume h1 {
+/* TRACK POSITION */
+.track .trackProgress {
+  width: 40px;
+  /* border: 1px solid white ; */
+  top: 30px;
+  left: 225px;
+  position: absolute;
+}
 
-    height: 15px;
-    /* border: 1px solid yellow ; */
-    top: 9px;
-    left: 0px;
-    font-size: 10px;
-    color: darkgray;
-    position: absolute;
-  }
+.trackProgress h1 {
+  width: 55px;
+  /* border: 1px solid white ; */
+  top: 0px;
+  left: 45px;
+  font-size: 10px;
+  color: darkgray;
+  position: absolute;
+}
 
-  .trackVolume h2 {
-    font-family: "retron";
-    text-align: center;
-    width: 45px;
-    height: 15px;
-    /* border: 1px solid yellow ; */
-    top: 5px;
-    right: 0px;
-    font-size: 13px;
-    color: yellow;
-    background: black;
-    position: absolute; 
-  }
-
-
-
-  /* TRACK POSITION */
-  .track .trackProgress {
-    width: 40px;
-    /* border: 1px solid white ; */
-    top: 30px;
-    left: 225px;
-    position: absolute;
-  }
-
-  .trackProgress h1 {
-    width: 55px;
-    /* border: 1px solid white ; */
-    top: 0px;
-    left: 45px;
-    font-size: 10px;
-    color: darkgray;
-    position: absolute;
-  }
-
-  .trackProgress h2 {
-    font-family: "retron";
-    text-align: center;
-    width: 45px;
-    height: 14px;
-    /* border: 1px solid yellow ; */
-    top: 11px;
-    left: 48px;
-    font-size: 13px;
-    color: yellow;
-    background: black;
-    position: absolute; 
-  }
+.trackProgress h2 {
+  font-family: "retron";
+  text-align: center;
+  width: 45px;
+  height: 14px;
+  /* border: 1px solid yellow ; */
+  top: 11px;
+  left: 48px;
+  font-size: 13px;
+  color: yellow;
+  background: black;
+  position: absolute;
+}
