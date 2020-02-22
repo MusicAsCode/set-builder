@@ -5,6 +5,7 @@ import * as Tone from "tone";
 // Import react-circular-progressbar module and styles
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "./Track.css";
+import Vis from "./Vis";
 
 //single track
 const Track = ({ asset, player, tracksPos }) => {
@@ -20,6 +21,7 @@ const Track = ({ asset, player, tracksPos }) => {
     player.loopEnd = "4:0:0";
     player.toMaster().sync();
     player.start();
+    //console.log("player " + asset.guid + " loaded");
   }, []);
 
   // const loop = new Tone.Loop(function(time) {
@@ -70,24 +72,19 @@ const Track = ({ asset, player, tracksPos }) => {
   return (
     <>
       <div className="track">
-
         <p>{asset.name}</p>
 
         <div className="trackVolume">
           <Slider
             size={[200, 10]}
-            min={-45}
-            max={1}
+            min={-60}
+            max={-10}
             step={1}
             value={volume}
             onChange={setVolume}
           />
-          <h1>
-            Volume dB:
-          </h1>
-          <h2>
-            {volume}
-          </h2>
+          <h1>Volume dB:</h1>
+          <h2>{volume}</h2>
         </div>
 
         <div className="trackProgress">
@@ -98,14 +95,11 @@ const Track = ({ asset, player, tracksPos }) => {
               strokeLinecap: "butt"
             })}
           />
-          <h1>
-            LOOP POS:
-          </h1>
-          <h2>
-            {tracksPos}
-          </h2>
+          <h1>LOOP POS:</h1>
+          <h2>{tracksPos}</h2>
         </div>
 
+        <Vis asset={asset} playerBuffer={player.buffer} />
       </div>
     </>
   );
