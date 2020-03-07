@@ -1,10 +1,10 @@
 {
-  "name": "music-as-code-visualization-wip",
+  "name": "MusicAsCode",
   "author": "Peter Styk <peter@musicascode.com> (https://musicascode.com)",
   "homepage": "https://github.com/MusicAsCode/set-player",
   "repository": "github:MusicAsCode/set-player",
   "license": "MIT",
-  "version": "0.7",
+  "version": "0.7.2",
   "private": true,
   "main": "src/index.tsx",
   "dependencies": {
@@ -20,7 +20,7 @@
     "react-dom": "16.12.0",
     "react-nexusui": "0.1.7",
     "react-scripts": "3.3.0",
-    "tone": "13.8.25"
+    "tone": "13.8.34"
   },
   "scripts": {
     "start": "react-scripts start",
