@@ -17,8 +17,8 @@ const Track = ({ asset, player, tracksPos }) => {
   useEffect(() => {
     player.autostart = false;
     player.loop = true;
-    player.loopStart = "0:0:0";
-    player.loopEnd = "4:0:0";
+    player.loopStart = asset.posStart;
+    player.loopEnd = asset.posEnd;
     player.toMaster().sync();
     player.start();
     //console.log("player " + asset.guid + " loaded");
