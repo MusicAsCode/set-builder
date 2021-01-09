@@ -8,25 +8,33 @@ const PlayersProvider = ({ children }) => {
         guid: "loop01",
         name: "Fiction",
         volume: -21,
-        url: "https://f.4bars.media/6E/52/6E52A9C1F2DD41ABA6397F82CD3C619B.ogg"
+        url: "https://f.4bars.media/6E/52/6E52A9C1F2DD41ABA6397F82CD3C619B.ogg",
+        posStart: "0:0:0",
+        posEnd: "4:0:0"
       },
       {
         guid: "loop02",
         name: "Fact",
         volume: -33,
-        url: "https://f.4bars.media/C1/1C/C11C71DBF1CF40FE85CF1044515F115C.ogg"
+        url: "https://f.4bars.media/C1/1C/C11C71DBF1CF40FE85CF1044515F115C.ogg",
+        posStart: "0:0:0",
+        posEnd: "4:0:0"
       },
       {
         guid: "loop03",
         name: "Stranger",
         volume: -36,
-        url: "https://f.4bars.media/E8/F1/E8F1E4E304334B5580D23F9CCC376278.ogg"
+        url: "https://f.4bars.media/E8/F1/E8F1E4E304334B5580D23F9CCC376278.ogg",
+        posStart: "0:0:0",
+        posEnd: "4:0:0"
       },
       {
         guid: "loop04",
         name: "Dream",
         volume: -24,
-        url: "https://f.4bars.media/2A/EB/2AEBDC8619BF411A900EDFF406103150.ogg"
+        url: "https://f.4bars.media/2A/EB/2AEBDC8619BF411A900EDFF406103150.ogg",
+        posStart: "0:0:0",
+        posEnd: "4:0:0"
       }
     ]
   });

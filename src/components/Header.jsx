@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="header">
       MUSIC AS CODE
-      <h1>v0.7</h1>
+      <h1>v0.7.2</h1>
     </header>
   );
 };
