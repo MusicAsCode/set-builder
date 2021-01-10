@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Tone from "tone";
+import * as Tone from "tone";
 
 const PlayersProvider = ({ children }) => {
   const [assetList, setAssetList] = useState({

@@ -1,5 +1,6 @@
 //import React, { useState, useEffect } from "react";
-import Tone from "tone";
+import * as Tone from "tone";
+
 
 const TransportProvider = () => {
   Tone.Transport.timeSignature = [4, 4];
